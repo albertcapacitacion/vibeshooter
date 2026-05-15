@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    />
+    <title>Retro Vertical Shmup</title>
+    <script type="module" src="/src/main.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <div id="rotate-overlay" class="rotate-overlay is-hidden">
+        <div class="rotate-card">
+          <p class="eyebrow">Landscape Required</p>
+          <h1>Rotate Your Device</h1>
+          <p>
+            This prototype is laid out for a vertical arcade field inside a
+            landscape screen.
+          </p>
+        </div>
+      </div>
+
+      <div id="game-shell" class="game-shell">
+        <main class="playfield-shell">
+          <div class="playfield-frame">
+            <div id="game-viewport" class="game-viewport"></div>
+
+            <div id="hud-overlay" class="hud-overlay is-hidden">
+              <section class="hud-panel hud-panel-lives">
+                <p class="hud-label">Lives</p>
+                <div id="hud-lives" class="life-cells"></div>
+              </section>
+
+              <section class="hud-panel hud-panel-score">
+                <p class="hud-label">Score</p>
+                <p id="hud-score" class="hud-value">000000</p>
+              </section>
+
+              <section class="hud-panel hud-panel-stage">
+                <p class="hud-label">Stage</p>
+                <p id="hud-stage" class="hud-value">1 / 2</p>
+              </section>
+
+              <section class="hud-panel hud-panel-fire">
+                <p class="hud-label">Fire</p>
+                <p class="hud-value">Tap J</p>
+                <p class="hud-subvalue">Repeated key taps only</p>
+              </section>
+            </div>
+          </div>
+
+          <div id="title-overlay" class="screen-overlay">
+            <div class="screen-card">
+              <p id="title-eyebrow" class="eyebrow">Vertical Arcade Prototype</p>
+              <h1 id="title-heading">Star Rift Assault</h1>
+              <p id="title-message">
+                Two-stage space assault. Desktop prototype uses
+                <strong>WASD</strong> to move and <strong>J</strong> to fire.
+              </p>
+              <button id="start-button" class="start-button" type="button">
+                Start Mission
+              </button>
+            </div>
+          </div>
+
+          <div id="status-overlay" class="screen-overlay is-hidden">
+            <div class="screen-card">
+              <p id="status-eyebrow" class="eyebrow">Mission Report</p>
+              <h2 id="status-title">Stage Clear</h2>
+              <p id="status-message">Prepare for the next sortie.</p>
+              <button id="status-button" class="start-button" type="button">
+                Continue
+              </button>
+            </div>
+          </div>
+        </main>
+      </div>
+    </div>
+  </body>
+</html>
